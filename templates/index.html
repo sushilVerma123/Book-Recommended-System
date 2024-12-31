@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recommendation System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<style>
+img {
+  width: 30%;
+  height: 30%;
+  margin=0;
+  padding:0;
+}
+
+</style>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img class="rounded h-1 w-1"
+                                              src="data:image/jpeg;base64,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"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Top Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recommended">Recommended</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="text-center m-3">
+    <h1>Top 50 Book</h1>
+</div>
+<div class="row">
+    {% for i in range(book_name|length) %}
+    <div class="col-md-3">
+        <div class="card p-2" style="width: 18rem;">
+        <img src={{image[i]}} class="card-img-top" alt="...">
+        <ul class="list-group list-group-flush">
+              <li class="list-group-item">Book Name:{{book_name[i]}} </li>
+            <li class="list-group-item">Author Name:{{author[i]}}</li>
+            <li class="list-group-item">Rating:{{votes[i]}} </li>
+            <li class="list-group-item">Avg. Rating: {{rating[i]}}</li>
+        </ul>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
